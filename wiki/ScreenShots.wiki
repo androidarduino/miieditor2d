@@ -1,0 +1,15 @@
+#summary One-sentence summary of this page.
+
+= Introduction =
+
+Some screen shots taken on Suse Linux 11.0
+
+= Details =
+
+* Interface
+
+[http://www.vrcats.com/ http://www.vrcats.com/video/miieditor.png]
+
+* Exported Image
+
+[http://www.vrcats.com/ http://www.vrcats.com/video/xiaoshenyang.jpg]
