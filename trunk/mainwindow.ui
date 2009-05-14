@@ -1,0 +1,721 @@
+<ui version="4.0" >
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>767</width>
+    <height>607</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Mee Editor</string>
+  </property>
+  <property name="iconSize" >
+   <size>
+    <width>32</width>
+    <height>32</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>72</y>
+     <width>767</width>
+     <height>512</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout" >
+    <item>
+     <widget class="QSplitter" name="splitter_2" >
+      <property name="orientation" >
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <widget class="QSplitter" name="splitter" >
+       <property name="orientation" >
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <widget class="QToolBox" name="toolBox" >
+        <property name="sizePolicy" >
+         <sizepolicy vsizetype="Expanding" hsizetype="Expanding" >
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="currentIndex" >
+         <number>4</number>
+        </property>
+        <widget class="QWidget" name="page_1" >
+         <property name="geometry" >
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>94</width>
+           <height>68</height>
+          </rect>
+         </property>
+         <attribute name="label" >
+          <string>Faces</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout" >
+          <item>
+           <widget class="QScrollArea" name="scrollArea_2" >
+            <property name="widgetResizable" >
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents_2" >
+             <property name="geometry" >
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>94</width>
+               <height>24</height>
+              </rect>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page_2" >
+         <property name="geometry" >
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>94</width>
+           <height>68</height>
+          </rect>
+         </property>
+         <attribute name="label" >
+          <string>Hair</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_2" >
+          <item>
+           <widget class="QScrollArea" name="scrollArea_3" >
+            <property name="widgetResizable" >
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents_3" >
+             <property name="geometry" >
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>94</width>
+               <height>24</height>
+              </rect>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page_3" >
+         <property name="geometry" >
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>94</width>
+           <height>68</height>
+          </rect>
+         </property>
+         <attribute name="label" >
+          <string>Eyes</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_3" >
+          <item>
+           <widget class="QScrollArea" name="scrollArea_4" >
+            <property name="widgetResizable" >
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents_4" >
+             <property name="geometry" >
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>94</width>
+               <height>24</height>
+              </rect>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="brow" >
+         <property name="geometry" >
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>94</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <attribute name="label" >
+          <string>Eyebrows</string>
+         </attribute>
+         <widget class="QScrollArea" name="scrollArea_9" >
+          <property name="geometry" >
+           <rect>
+            <x>9</x>
+            <y>9</y>
+            <width>637</width>
+            <height>174</height>
+           </rect>
+          </property>
+          <property name="widgetResizable" >
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_9" >
+           <property name="geometry" >
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>631</width>
+             <height>168</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QWidget" name="page_4" >
+         <property name="geometry" >
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>276</width>
+           <height>254</height>
+          </rect>
+         </property>
+         <attribute name="label" >
+          <string>Noses</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_4" >
+          <item>
+           <widget class="QScrollArea" name="scrollArea_5" >
+            <property name="widgetResizable" >
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents_5" >
+             <property name="geometry" >
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>262</width>
+               <height>240</height>
+              </rect>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page_5" >
+         <property name="geometry" >
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>94</width>
+           <height>68</height>
+          </rect>
+         </property>
+         <attribute name="label" >
+          <string>Lips</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_5" >
+          <item>
+           <widget class="QScrollArea" name="scrollArea_6" >
+            <property name="widgetResizable" >
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents_6" >
+             <property name="geometry" >
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>94</width>
+               <height>24</height>
+              </rect>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page_6" >
+         <property name="geometry" >
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>94</width>
+           <height>68</height>
+          </rect>
+         </property>
+         <attribute name="label" >
+          <string>Features</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_6" >
+          <item>
+           <widget class="QScrollArea" name="scrollArea_7" >
+            <property name="widgetResizable" >
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents_7" >
+             <property name="geometry" >
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>94</width>
+               <height>24</height>
+              </rect>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="page_7" >
+         <property name="geometry" >
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>94</width>
+           <height>68</height>
+          </rect>
+         </property>
+         <attribute name="label" >
+          <string>Glasses</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_7" >
+          <item>
+           <widget class="QScrollArea" name="scrollArea_8" >
+            <property name="widgetResizable" >
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents_8" >
+             <property name="geometry" >
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>94</width>
+               <height>24</height>
+              </rect>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="frame" >
+       <property name="frameShape" >
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow" >
+        <enum>QFrame::Raised</enum>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_8" >
+        <item>
+         <widget class="QPushButton" name="pushButton" >
+          <property name="text" >
+           <string>PushButton</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QScrollArea" name="scrollArea" >
+          <property name="widgetResizable" >
+           <bool>true</bool>
+          </property>
+          <property name="alignment" >
+           <set>Qt::AlignCenter</set>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents" >
+           <property name="geometry" >
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>447</width>
+             <height>451</height>
+            </rect>
+           </property>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>767</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File" >
+    <property name="title" >
+     <string>&amp;File</string>
+    </property>
+    <addaction name="action_Open" />
+    <addaction name="action_Close" />
+    <addaction name="action_Save" />
+    <addaction name="actionS_ave_As" />
+    <addaction name="separator" />
+    <addaction name="action_Exit" />
+   </widget>
+   <widget class="QMenu" name="menu_Pose" >
+    <property name="title" >
+     <string>&amp;Pose</string>
+    </property>
+    <addaction name="actionStand" />
+    <addaction name="actionThinking" />
+    <addaction name="actionSleeping" />
+    <addaction name="actionYarning" />
+    <addaction name="actionDancing" />
+   </widget>
+   <widget class="QMenu" name="menuEmotion" >
+    <property name="title" >
+     <string>&amp;Emotion</string>
+    </property>
+    <addaction name="actionNo_Emotion" />
+    <addaction name="actionSmile" />
+    <addaction name="actionLaugh" />
+    <addaction name="actionCry" />
+    <addaction name="actionSad" />
+    <addaction name="actionAngry" />
+    <addaction name="actionEmbrassed" />
+    <addaction name="actionIdle" />
+    <addaction name="actionSuprise" />
+   </widget>
+   <widget class="QMenu" name="menuTools" >
+    <property name="title" >
+     <string>&amp;Tools</string>
+    </property>
+    <addaction name="actionOptions" />
+   </widget>
+   <widget class="QMenu" name="menu_Help" >
+    <property name="title" >
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionAbout" />
+    <addaction name="actionCredit" />
+    <addaction name="actionRelease_Notes" />
+   </widget>
+   <widget class="QMenu" name="menuEdit" >
+    <property name="title" >
+     <string>Edit</string>
+    </property>
+    <addaction name="actionChange_Color" />
+    <addaction name="actionChange_Transparency" />
+    <addaction name="actionMove_up" />
+    <addaction name="actionMove_down" />
+    <addaction name="actionMove_Left" />
+    <addaction name="actionMove_Right" />
+    <addaction name="actionZoom_in" />
+    <addaction name="actionZoom_out" />
+    <addaction name="actionHorizontally_Stetch" />
+    <addaction name="actionVertically_Stretch" />
+    <addaction name="actionRotate_Clockwise" />
+    <addaction name="actionRotate_Unclockwise" />
+    <addaction name="actionReverse" />
+   </widget>
+   <addaction name="menu_File" />
+   <addaction name="menu_Pose" />
+   <addaction name="menuEmotion" />
+   <addaction name="menuTools" />
+   <addaction name="menu_Help" />
+   <addaction name="menuEdit" />
+  </widget>
+  <widget class="QStatusBar" name="statusbar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>584</y>
+     <width>767</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="toolBar" >
+   <property name="geometry" >
+    <rect>
+     <x>0</x>
+     <y>26</y>
+     <width>767</width>
+     <height>46</height>
+    </rect>
+   </property>
+   <property name="windowTitle" >
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea" >
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak" >
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionChange_Color" />
+   <addaction name="actionChange_Transparency" />
+   <addaction name="separator" />
+   <addaction name="actionMove_Left" />
+   <addaction name="actionMove_Right" />
+   <addaction name="actionMove_up" />
+   <addaction name="actionMove_down" />
+   <addaction name="separator" />
+   <addaction name="actionReverse" />
+   <addaction name="separator" />
+   <addaction name="actionZoom_in" />
+   <addaction name="actionZoom_out" />
+   <addaction name="separator" />
+   <addaction name="actionRotate_Clockwise" />
+   <addaction name="actionRotate_Unclockwise" />
+   <addaction name="separator" />
+   <addaction name="actionHorizontally_Stetch" />
+   <addaction name="actionVertically_Stretch" />
+   <addaction name="separator" />
+  </widget>
+  <action name="action_Open" >
+   <property name="text" >
+    <string>&amp;Open</string>
+   </property>
+  </action>
+  <action name="action_Close" >
+   <property name="text" >
+    <string>&amp;Close</string>
+   </property>
+  </action>
+  <action name="action_Save" >
+   <property name="text" >
+    <string>&amp;Save</string>
+   </property>
+  </action>
+  <action name="actionS_ave_As" >
+   <property name="text" >
+    <string>Save &amp;As</string>
+   </property>
+  </action>
+  <action name="action_Exit" >
+   <property name="text" >
+    <string>&amp;Exit</string>
+   </property>
+  </action>
+  <action name="actionStand" >
+   <property name="text" >
+    <string>Stand</string>
+   </property>
+  </action>
+  <action name="actionThinking" >
+   <property name="text" >
+    <string>Thinking</string>
+   </property>
+  </action>
+  <action name="actionSleeping" >
+   <property name="text" >
+    <string>Sleeping</string>
+   </property>
+  </action>
+  <action name="actionYarning" >
+   <property name="text" >
+    <string>Yarning</string>
+   </property>
+  </action>
+  <action name="actionDancing" >
+   <property name="text" >
+    <string>Dancing</string>
+   </property>
+  </action>
+  <action name="actionNo_Emotion" >
+   <property name="text" >
+    <string>No Emotion</string>
+   </property>
+  </action>
+  <action name="actionSmile" >
+   <property name="text" >
+    <string>Smile</string>
+   </property>
+  </action>
+  <action name="actionLaugh" >
+   <property name="text" >
+    <string>Laugh</string>
+   </property>
+  </action>
+  <action name="actionCry" >
+   <property name="text" >
+    <string>Cry</string>
+   </property>
+  </action>
+  <action name="actionSad" >
+   <property name="text" >
+    <string>Sad</string>
+   </property>
+  </action>
+  <action name="actionAngry" >
+   <property name="text" >
+    <string>Angry</string>
+   </property>
+  </action>
+  <action name="actionEmbrassed" >
+   <property name="text" >
+    <string>Embarassed</string>
+   </property>
+  </action>
+  <action name="actionIdle" >
+   <property name="text" >
+    <string>Idle</string>
+   </property>
+  </action>
+  <action name="actionSuprise" >
+   <property name="text" >
+    <string>Suprise</string>
+   </property>
+  </action>
+  <action name="actionOptions" >
+   <property name="text" >
+    <string>Options</string>
+   </property>
+  </action>
+  <action name="actionAbout" >
+   <property name="text" >
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionCredit" >
+   <property name="text" >
+    <string>Credit</string>
+   </property>
+  </action>
+  <action name="actionRelease_Notes" >
+   <property name="text" >
+    <string>Release Notes</string>
+   </property>
+  </action>
+  <action name="actionChange_Color" >
+   <property name="icon" >
+    <iconset resource="res.qrc" >
+     <normaloff>:/新前缀/colorselector.svg</normaloff>:/新前缀/colorselector.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>Change Color</string>
+   </property>
+  </action>
+  <action name="actionMove_up" >
+   <property name="icon" >
+    <iconset resource="res.qrc" >
+     <normaloff>:/新前缀/up.svg</normaloff>:/新前缀/up.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>Move up</string>
+   </property>
+  </action>
+  <action name="actionMove_down" >
+   <property name="icon" >
+    <iconset resource="res.qrc" >
+     <normaloff>:/新前缀/down.svg</normaloff>:/新前缀/down.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>Move down</string>
+   </property>
+  </action>
+  <action name="actionRotate_Clockwise" >
+   <property name="icon" >
+    <iconset>
+     <normaloff>:/新前缀/rotate_clockwise.svg</normaloff>:/新前缀/rotate_clockwise.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>Rotate Clockwise</string>
+   </property>
+  </action>
+  <action name="actionRotate_Unclockwise" >
+   <property name="icon" >
+    <iconset>
+     <normaloff>:/新前缀/rotate_unclockwise.svg</normaloff>:/新前缀/rotate_unclockwise.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>Rotate Unclockwise</string>
+   </property>
+  </action>
+  <action name="actionMove_Left" >
+   <property name="icon" >
+    <iconset resource="res.qrc" >
+     <normaloff>:/新前缀/left.svg</normaloff>:/新前缀/left.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>Move Left</string>
+   </property>
+  </action>
+  <action name="actionMove_Right" >
+   <property name="icon" >
+    <iconset resource="res.qrc" >
+     <normaloff>:/新前缀/right.svg</normaloff>:/新前缀/right.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>Move Right</string>
+   </property>
+  </action>
+  <action name="actionZoom_in" >
+   <property name="icon" >
+    <iconset resource="res.qrc" >
+     <normaloff>:/新前缀/zoomin.svg</normaloff>:/新前缀/zoomin.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>Zoom in</string>
+   </property>
+  </action>
+  <action name="actionZoom_out" >
+   <property name="icon" >
+    <iconset resource="res.qrc" >
+     <normaloff>:/新前缀/zoomout.svg</normaloff>:/新前缀/zoomout.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>Zoom out</string>
+   </property>
+  </action>
+  <action name="actionHorizontally_Stetch" >
+   <property name="icon" >
+    <iconset resource="res.qrc" >
+     <normaloff>:/新前缀/hstretch.svg</normaloff>:/新前缀/hstretch.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>Horizontally Stretch</string>
+   </property>
+  </action>
+  <action name="actionVertically_Stretch" >
+   <property name="icon" >
+    <iconset resource="res.qrc" >
+     <normaloff>:/新前缀/vstretch.svg</normaloff>:/新前缀/vstretch.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>Vertically Stretch</string>
+   </property>
+  </action>
+  <action name="actionReverse" >
+   <property name="icon" >
+    <iconset resource="res.qrc" >
+     <normaloff>:/新前缀/reverse.svg</normaloff>:/新前缀/reverse.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>Reverse</string>
+   </property>
+  </action>
+  <action name="actionChange_Transparency" >
+   <property name="icon" >
+    <iconset resource="res.qrc" >
+     <normaloff>:/新前缀/transparency.svg</normaloff>:/新前缀/transparency.svg</iconset>
+   </property>
+   <property name="text" >
+    <string>Change Transparency</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="res.qrc" />
+ </resources>
+ <connections/>
+</ui>
