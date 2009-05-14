@@ -1,0 +1,15 @@
+<RCC>
+  <qresource prefix="新前缀" >
+    <file>vstretch.svg</file>
+    <file>hstretch.svg</file>
+    <file>zoomout.svg</file>
+    <file>zoomin.svg</file>
+    <file>right.svg</file>
+    <file>up.svg</file>
+    <file>reverse.svg</file>
+    <file>down.svg</file>
+    <file>left.svg</file>
+    <file>colorselector.svg</file>
+    <file>transparency.svg</file>
+  </qresource>
+</RCC>
