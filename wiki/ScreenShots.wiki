@@ -1,4 +1,4 @@
-#Summary: Some screen shots taken on Suse Linux 11.0
+#summary Some screen shots taken on Suse Linux 11.0
 
 * Interface
 
