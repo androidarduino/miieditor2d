@@ -1,10 +1,4 @@
-#summary One-sentence summary of this page.
-
-= Introduction =
-
-Some screen shots taken on Suse Linux 11.0
-
-= Details =
+#Some screen shots taken on Suse Linux 11.0
 
 * Interface
 
