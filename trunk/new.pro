@@ -9,23 +9,30 @@ INCLUDEPATH += .
 QT +=xml
 QT +=svg
 
+CONFIG+=debug
+
+UI_DIR=./tmpdata
+MOC_DIR=./tmpdata
+OBJECTS_DIR=./tmpdata
+RCC_DIR=./tmpdata
+
 # Input
-HEADERS += beard.h \
-           component.h \
-           eye.h \
-           brow.h \
-           face.h \
-           feature.h \
-           glasses.h \
-           hair.h \
-           head.h \
-           lip.h \
-           mustach.h \
-           nose.h \
-           componentstore.h \
-           mainwindow.h \
-           toolboxitem.h \
-           displaywidget.h
-SOURCES += main.cpp mainwindow.cpp
-FORMS   += mainwindow.ui
-RESOURCES   += res.qrc
+HEADERS += src/beard.h \
+           src/component.h \
+           src/eye.h \
+           src/brow.h \
+           src/face.h \
+           src/feature.h \
+           src/glasses.h \
+           src/hair.h \
+           src/head.h \
+           src/lip.h \
+           src/mustach.h \
+           src/nose.h \
+           src/componentstore.h \
+           src/mainwindow.h \
+           src/toolboxitem.h \
+           src/displaywidget.h
+SOURCES += src/main.cpp src/mainwindow.cpp
+FORMS   += src/mainwindow.ui
+RESOURCES   += src/res.qrc
