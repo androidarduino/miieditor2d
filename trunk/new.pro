@@ -33,6 +33,14 @@ HEADERS += src/beard.h \
            src/mainwindow.h \
            src/toolboxitem.h \
            src/displaywidget.h
-SOURCES += src/main.cpp src/mainwindow.cpp
+
+SOURCES += src/main.cpp \
+           src/component.cpp \
+           src/componentstore.cpp \
+           src/displaywidget.cpp \
+           src/head.cpp \
+           src/toolboxitem.cpp \
+            src/mainwindow.cpp
+
 FORMS   += src/mainwindow.ui
 RESOURCES   += src/res.qrc
