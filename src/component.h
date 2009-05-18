@@ -2,6 +2,7 @@
 #define COMPONENT_H
 
 #include <QString>
+#include <QDataStream>
 #include <QDebug>
 
 class MiiComponent
@@ -29,6 +30,8 @@ class MiiComponent
         bool canRotate();
         bool canReverse();
         bool canPan();
+        void save(QDataStream& stream);
+        void load(QDataStream& stream);
     private:
         double m_x,m_y, m_scaleX, m_scaleY;
         double m_rotation, m_transparency;

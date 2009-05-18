@@ -6,6 +6,7 @@ DisplayWidget::DisplayWidget(MiiComponentStore* database)
     renderer()->setViewBox(QRectF(0,0,744,1052));
     setFixedSize(372, 526);
     currentItem=&face;
+    currentFileName="";
 }
 
 void DisplayWidget::refresh()
@@ -151,4 +152,54 @@ void DisplayWidget::setCurrentItem(int index)
 int DisplayWidget::heightForWidth(int w) const
 {
     return int(((double)w)/744*1052);
+}
+
+void DisplayWidget::save(QString fn)
+{
+    currentFileName=fn;
+    if(currentFileName=="")
+    {
+        currentFileName=QFileDialog::getSaveFileName(0, QObject::tr("Please select file name to save to"), QString(), QObject::tr("Mee File (*.mee)"));
+        if(currentFileName=="")
+            return;
+    }
+    QFile file(currentFileName);
+    if(!file.open(QIODevice::WriteOnly))
+        qDebug()<<QObject::tr("unable to open file for writting");
+    QDataStream out(&file);
+    face.save(out);
+    feature.save(out);
+    brows.save(out);
+    hair.save(out);
+    underhair.save(out);
+    eyes.save(out);
+    nose.save(out);
+    lip.save(out);
+    glasses.save(out);
+    mustach.save(out);
+    beard.save(out);
+    file.close();
+}
+
+void DisplayWidget::loadFromFile()
+{
+    currentFileName=QFileDialog::getOpenFileName(0, QObject::tr("Please select file name to load"), QString(), QObject::tr("Mee File (*.mee)"));
+    if(currentFileName=="")
+        return;
+    QFile file(currentFileName);
+    if(!file.open(QIODevice::ReadOnly))
+        qDebug()<<QObject::tr("unable to open file for reading");
+    QDataStream in(&file);
+    face.load(in);
+    feature.load(in);
+    brows.load(in);
+    hair.load(in);
+    underhair.load(in);
+    eyes.load(in);
+    nose.load(in);
+    lip.load(in);
+    glasses.load(in);
+    mustach.load(in);
+    file.close();
+    refresh();
 }
