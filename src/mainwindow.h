@@ -20,7 +20,7 @@ class EditorWindow:public QMainWindow
 		void moveLeft(){displayWidget->modify('l',"25");}
 		void moveRight(){displayWidget->modify('r',"25");}
 		void clockRotate(){displayWidget->modify('s',"5");}
-		void unClockRotate(){displayWidget->modify('s',"-5");}
+		void counterClockRotate(){displayWidget->modify('s',"-5");}
 		void reverse(){displayWidget->modify('e',"");}
 		void zoomIn(){displayWidget->modify('i',"1.1");}
 		void zoomOut(){displayWidget->modify('o',"1.1");}

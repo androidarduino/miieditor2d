@@ -87,7 +87,7 @@ void EditorWindow::connectToolBar()
 	connect(ui->actionMove_Right, SIGNAL(triggered()), this, SLOT(moveRight()));
 	connect(ui->actionChange_Color, SIGNAL(triggered()), this, SLOT(setColor()));
 	connect(ui->actionRotate_Clockwise, SIGNAL(triggered()), this, SLOT(clockRotate()));
-	connect(ui->actionRotate_Unclockwise, SIGNAL(triggered()), this, SLOT(unClockRotate()));
+	connect(ui->actionRotate_Counter_Clockwise, SIGNAL(triggered()), this, SLOT(counterClockRotate()));
 	connect(ui->actionReverse, SIGNAL(triggered()), this, SLOT(reverse()));
 	connect(ui->actionZoom_in, SIGNAL(triggered()), this, SLOT(zoomIn()));
 	connect(ui->actionZoom_out, SIGNAL(triggered()), this, SLOT(zoomOut()));
