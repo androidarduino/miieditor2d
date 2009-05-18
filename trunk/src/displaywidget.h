@@ -2,6 +2,7 @@
 #define DISPLAYWIDGET_H
 
 #include <QSvgWidget>
+#include <QFileDialog>
 #include "componentstore.h"
 #include "toolboxitem.h"
 
@@ -30,6 +31,8 @@ public slots:
     void updateDisplay(ToolBoxItem* item);
     void modify(char actionType, QString value);
     void setCurrentItem(int index);
+    void save(QString fn="");
+    void loadFromFile();
 
 protected:
     int heightForWidth(int w) const;
@@ -49,5 +52,6 @@ private:
     MiiMustach mustach;
     MiiBeard beard;
     MiiComponent *currentItem;
+    QString currentFileName;
 };
 #endif

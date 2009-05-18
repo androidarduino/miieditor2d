@@ -95,16 +95,21 @@ void EditorWindow::connectToolBar()
 	connect(ui->actionHorizontally_Stetch, SIGNAL(triggered()), this, SLOT(HExpand()));
 	connect(ui->actionVertically_Stretch, SIGNAL(triggered()), this, SLOT(VExpand()));
 	connect(ui->action_Save, SIGNAL(triggered()), this, SLOT(save()));
+	connect(ui->action_Open, SIGNAL(triggered()), displayWidget, SLOT(loadFromFile()));
 }
 
 void EditorWindow::save()
 {
     QString sf=QFileDialog::getSaveFileName(this, tr("Save File"),"untitled.mee",tr("MEE (*.mee);; SVG (*.svg);;PNG (*.png);;JPG (*.jpg)"));
-    //TODO: do with mee format here.
+    if(sf.endsWith(".mee"))
+    {
+        displayWidget->save(sf);
+        return;
+    }
     if(sf.endsWith(".svg"))
     {
         QFile file(sf);
-        if (file.open(QFile::WriteOnly | QFile::Truncate)) 
+        if (file.open(QFile::WriteOnly | QFile::Truncate))
         {
             QTextStream out(&file);
             out << displayWidget->currentSVG;
@@ -115,7 +120,7 @@ void EditorWindow::save()
     }
     if(!(sf.endsWith(".png")||sf.endsWith(".jpg")))
     {
-        qDebug()<<"invalid file type";
+        qDebug()<<tr("invalid file type");
         return;
     }
     QImage img(744,1052,QImage::Format_RGB32);
@@ -123,5 +128,5 @@ void EditorWindow::save()
     p.setViewport(0, 0, img.width(), img.height());
     displayWidget->renderer()->render(&p);
     img.save(sf);
-    qDebug()<<"Image file saved to: "<<sf;
+    qDebug()<<tr("Image file saved to: ")<<sf;
 }

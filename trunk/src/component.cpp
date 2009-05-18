@@ -25,6 +25,16 @@ MiiComponent::~MiiComponent()
 
 }
 
+void MiiComponent::save(QDataStream& stream)
+{
+    stream<<m_x<<m_y<<m_scaleX<<m_scaleY<<m_rotation<<m_transparency<<m_color<<m_prefix<<m_zOrder<<m_symetric<<m_canRotate<<m_canReverse<<m_canPan<<m_index<<m_svgDefs<<m_groupName;
+}
+
+void MiiComponent::load(QDataStream& stream)
+{
+    stream>>m_x>>m_y>>m_scaleX>>m_scaleY>>m_rotation>>m_transparency>>m_color>>m_prefix>>m_zOrder>>m_symetric>>m_canRotate>>m_canReverse>>m_canPan>>m_index>>m_svgDefs>>m_groupName;
+}
+
 void MiiComponent::setItem(QString itemName)
 {
     if(itemName.startsWith(m_prefix))
