@@ -1,10 +1,20 @@
 #include "componentstore.h"
+#include <QFileDialog>
 
 MiiComponentStore::MiiComponentStore(QString source)
 {
     doc=new QDomDocument();
     QFile file(source);
-    file.open(QIODevice::ReadOnly | QIODevice::Text);
+    if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        source = QFileDialog::getOpenFileName(0, QObject::tr("Please find all.svg"), "./", QObject::tr("all.svg (all.svg)"));
+        file.setFileName(source);
+        if(!file.open(QIODevice::ReadOnly | QIODevice::Text))
+        {
+            qDebug()<<QObject::tr("Can't load all.svg which is compulsory for the application to run.");
+            return;
+        }
+    }
     doc->setContent(&file);
     createComponents();
 }

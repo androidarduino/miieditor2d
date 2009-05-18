@@ -3,7 +3,7 @@
 ######################################################################
 
 TEMPLATE = app
-TARGET = test
+TARGET = meedesigner
 DEPENDPATH += .
 INCLUDEPATH += .
 QT +=xml

@@ -1,15 +1,17 @@
 <RCC>
-    <qresource prefix="新前缀" >
-        <file alias="colorselector.svg">images/colorselector.svg</file>
-        <file alias="down.svg">images/down.svg</file>
-        <file alias="hstretch.svg">images/hstretch.svg</file>
-        <file alias="left.svg">images/left.svg</file>
-        <file alias="reverse.svg">images/reverse.svg</file>
-        <file alias="right.svg">images/right.svg</file>
-        <file alias="transparency.svg">images/transparency.svg</file>
-        <file alias="up.svg">images/up.svg</file>
-        <file alias="vstretch.svg">images/vstretch.svg</file>
-        <file alias="zoomin.svg">images/zoomin.svg</file>
-        <file alias="zoomout.svg">images/zoomout.svg</file>
-    </qresource>
+  <qresource prefix="新前缀" >
+    <file alias="colorselector.svg" >images/colorselector.svg</file>
+    <file alias="down.svg" >images/down.svg</file>
+    <file alias="hstretch.svg" >images/hstretch.svg</file>
+    <file alias="left.svg" >images/left.svg</file>
+    <file alias="reverse.svg" >images/reverse.svg</file>
+    <file alias="right.svg" >images/right.svg</file>
+    <file alias="transparency.svg" >images/transparency.svg</file>
+    <file alias="up.svg" >images/up.svg</file>
+    <file alias="vstretch.svg" >images/vstretch.svg</file>
+    <file alias="zoomin.svg" >images/zoomin.svg</file>
+    <file alias="zoomout.svg" >images/zoomout.svg</file>
+    <file>images/rotatecounterclockwise.svg</file>
+    <file>images/rotateclockwise.svg</file>
+  </qresource>
 </RCC>
