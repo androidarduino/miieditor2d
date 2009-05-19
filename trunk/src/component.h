@@ -8,6 +8,7 @@
 class MiiComponent
 {
     public:
+        QString m_prefix;
         double m_canvasWidth, m_canvasHeight;
         MiiComponent(QString prefix, bool canRotate, bool symetric, bool canPan, bool canReverse, double posX, double posY);
         virtual ~MiiComponent();
@@ -36,7 +37,6 @@ class MiiComponent
         double m_x,m_y, m_scaleX, m_scaleY;
         double m_rotation, m_transparency;
         QString m_color;
-        QString m_prefix;
         int m_zOrder;
         bool m_symetric, m_canRotate, m_canReverse, m_canPan;
         int m_index;

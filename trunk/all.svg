@@ -72,7 +72,7 @@
        y2="0">
       <stop
          offset="100%"
-         stop-color="brown"
+         stop-color="color_hair"
          id="stop54" />
     </linearGradient>
     <linearGradient
@@ -83,7 +83,7 @@
        y2="0">
       <stop
          offset="100%"
-         stop-color="brown"
+         stop-color="color_under"
          id="stop54" />
     </linearGradient>
     <linearGradient
@@ -94,7 +94,7 @@
        y2="0">
       <stop
          offset="100%"
-         stop-color="red"
+         stop-color="color_mole"
          id="stop55" />
     </linearGradient>
     <linearGradient
@@ -105,7 +105,7 @@
        y2="0">
       <stop
          offset="100%"
-         stop-color="red"
+         stop-color="color_lip_light"
          id="stop58" />
     </linearGradient>
     <linearGradient
@@ -116,7 +116,7 @@
        y2="0">
       <stop
          offset="100%"
-         stop-color="brown"
+         stop-color="color_lip_dark"
          id="stop61" />
     </linearGradient>
     <linearGradient
@@ -127,7 +127,7 @@
        y2="0">
       <stop
          offset="100%"
-         stop-color="brown"
+         stop-color="color_mustach"
          id="stop64" />
     </linearGradient>
     <linearGradient
@@ -138,7 +138,7 @@
        y2="0">
       <stop
          offset="100%"
-         stop-color="yellow"
+         stop-color="color_grove"
          id="stop67" />
     </linearGradient>
     <linearGradient
@@ -171,7 +171,7 @@
        y2="0">
       <stop
          offset="100%"
-         stop-color="black"
+         stop-color="color_eye"
          id="stop76" />
     </linearGradient>
     <linearGradient
@@ -182,7 +182,7 @@
        y2="0">
       <stop
          offset="100%"
-         style="stop-color:#00ff00;stop-opacity:0.3"
+         style="stop-color:color_glasses;stop-opacity:opacity_glasses"
          id="stop79" />
     </linearGradient>
     <linearGradient
@@ -193,7 +193,7 @@
        y2="0">
       <stop
          offset="100%"
-         stop-color="red"
+         stop-color="color_border_glasses"
          id="stop3150" />
     </linearGradient>
     <linearGradient
@@ -204,7 +204,7 @@
        y2="0">
       <stop
          offset="100%"
-         stop-color="brown"
+         stop-color="color_beard"
          id="stop82" />
     </linearGradient>
     <linearGradient
@@ -215,17 +215,17 @@
        y2="0">
       <stop
          offset="100%"
-         stop-color="brown"
+         stop-color="color_brow"
          id="stop85" />
     </linearGradient>
     <linearGradient
        id="facecolorhelper">
       <stop
-         style="stop-color:#ffffff;stop-opacity:1;"
+         style="stop-color:color_face_light;stop-opacity:1;"
          offset="0"
          id="stop3325" />
       <stop
-         style="stop-color:#f9c18a;stop-opacity:1;"
+         style="stop-color:color_face_dark;stop-opacity:1;"
          offset="1"
          id="stop3327" />
     </linearGradient>
@@ -4384,7 +4384,7 @@
      style="display:none"
      sodipodi:insensitive="true">
     <path
-       style="fill:none;fill-rule:evenodd;stroke:url(#grovecolor);stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.61960784"
+       style="fill:none;fill-rule:evenodd;stroke:url(#beardcolor);stroke-width:10;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.61960784"
        d="M -60,298.07647 C -24.56711,312.56888 2.20391,314.29195 40,292.36218"
        id="path4393"
        sodipodi:nodetypes="cc" />

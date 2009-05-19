@@ -1,12 +1,28 @@
 #ifndef EDITORWINDOW_H
 #define EDITORWINDOW_H
 #include "ui_mainwindow.h"
+#include "ui_color.h"
 #include "componentstore.h"
 #include "displaywidget.h"
 #include "toolboxitem.h"
 #include <QSvgWidget>
 #include <QSvgRenderer>
 #include <QFileDialog>
+#include <QColorDialog>
+
+class ColorDialog:public QDialog
+{
+    Q_OBJECT
+    public:
+        ColorDialog(QString lightColor, QString darkColor, double transparency, QWidget* parent=0);
+        void getValues(QString& cl, QString& cd, double & t);
+    protected slots:
+        void changeLightColor();
+        void changeDarkColor();
+    private:
+        Ui_Dialog* dlg;
+
+};
 
 class EditorWindow:public QMainWindow
 {
@@ -26,8 +42,8 @@ class EditorWindow:public QMainWindow
 		void zoomOut(){displayWidget->modify('o',"1.1");}
 		void HExpand(){displayWidget->modify('h',"1.1");}
 		void VExpand(){displayWidget->modify('v',"1.1");}
-		void setColor(){displayWidget->modify('c',"#000000");}
-		void setTransparency(){displayWidget->modify('t',"1.0");}
+		void setColor();
+		void setTransparency();
                 void save();
     private:
         Ui::MainWindow *ui;

@@ -42,5 +42,5 @@ SOURCES += src/main.cpp \
            src/toolboxitem.cpp \
             src/mainwindow.cpp
 
-FORMS   += src/mainwindow.ui
+FORMS   += src/mainwindow.ui src/color.ui
 RESOURCES   += src/res.qrc

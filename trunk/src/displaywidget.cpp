@@ -43,7 +43,6 @@ void DisplayWidget::refresh()
     load(t.toUtf8());
     //qDebug()<<t;
     currentSVG=t.toUtf8();
-
     update();
 }
 
@@ -149,6 +148,12 @@ void DisplayWidget::setCurrentItem(int index)
     }
 }
 
+QString DisplayWidget::currentCategory()
+{
+    QString category=currentItem->m_prefix;
+    return category;
+}
+
 int DisplayWidget::heightForWidth(int w) const
 {
     return int(((double)w)/744*1052);
@@ -178,6 +183,7 @@ void DisplayWidget::save(QString fn)
     glasses.save(out);
     mustach.save(out);
     beard.save(out);
+    out<<m_store->colors;
     file.close();
 }
 
@@ -200,6 +206,8 @@ void DisplayWidget::loadFromFile()
     lip.load(in);
     glasses.load(in);
     mustach.load(in);
+    beard.load(in);
+    in>>m_store->colors;
     file.close();
     refresh();
 }
