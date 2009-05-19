@@ -109,9 +109,9 @@ void DisplayWidget::modify(char actionType, QString value)
     }
     if(i==&hair)
     {
-        i=&underhair;
+        currentItem=&underhair;
         modify(actionType, value);
-        i=&hair;
+        currentItem=&hair;
     }
     refresh();
 }

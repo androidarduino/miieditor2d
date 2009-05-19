@@ -93,7 +93,7 @@ void MiiComponent::reverse()
 {
     if(!m_canReverse)
         return;
-    m_x*=-1;
+    m_scaleX*=-1;
 }
 
 void MiiComponent::setColor(QString color)
