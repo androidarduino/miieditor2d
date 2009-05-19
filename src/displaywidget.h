@@ -25,6 +25,7 @@ class DisplayWidget:public QSvgWidget
 public:
     QString currentSVG;
     DisplayWidget(MiiComponentStore* database);
+    QString currentCategory();
 
 public slots:
     void refresh();

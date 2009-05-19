@@ -10,6 +10,7 @@ EditorWindow::EditorWindow(QWidget* parent, Qt::WindowFlags flags):QMainWindow(p
     setupToolBox();
     connectToolBox();
     connectToolBar();
+    displayWidget->refresh();
 }
 
 void EditorWindow::setupToolBox()
@@ -129,4 +130,143 @@ void EditorWindow::save()
     displayWidget->renderer()->render(&p);
     img.save(sf);
     qDebug()<<tr("Image file saved to: ")<<sf;
+}
+
+void EditorWindow::setColor()
+{
+    QString category=displayWidget->currentCategory();
+    QString lightColor, darkColor;
+    double opacity;
+    if(category=="hair")
+    {
+        lightColor=store->colors["color_hair"];
+        darkColor=store->colors["color_under"];
+        opacity=1;
+    }
+    if(category=="mole")
+    {
+        lightColor=store->colors["color_mole"];
+        darkColor="white";
+        opacity=1;
+    }
+    if(category=="lip")
+    {
+        lightColor=store->colors["color_lip_light"];
+        darkColor=store->colors["color_lip_dark"];
+        opacity=1;
+    }
+    if(category=="mustach"||category=="brow"||category=="beard")
+    {
+        lightColor=store->colors["color_brow"];
+        darkColor="white";
+        opacity=1;
+    }
+    if(category=="glasses")
+    {
+        lightColor=store->colors["color_glasses"];
+        darkColor=store->colors["color_border_glasses"];
+        opacity=store->colors["opacity_glasses"].toDouble();
+    }
+    if(category=="face")
+    {
+        lightColor=store->colors["color_face_light"];
+        darkColor=store->colors["color_face_dark"];
+        opacity=1;
+    }
+    if(category=="eye")
+    {
+        lightColor=store->colors["color_eye"];
+        darkColor="white";
+        opacity=1;
+    }
+    if(category=="feature")
+    {
+        lightColor=store->colors["color_grove"];
+        darkColor="white";
+        opacity=1;
+    }
+    ColorDialog dlg(lightColor,darkColor,opacity);
+    dlg.exec();
+    dlg.getValues(lightColor, darkColor, opacity);
+    qDebug()<<lightColor<<darkColor<<opacity;
+    if(category=="hair")
+    {
+        store->colors["color_hair"]=lightColor;
+        store->colors["color_under"]=darkColor;
+    }
+    if(category=="mole")
+    {
+        store->colors["color_mole"]=lightColor;
+    }
+    if(category=="lip")
+    {
+        store->colors["color_lip_light"]=lightColor;
+        store->colors["color_lip_dark"]=darkColor;
+    }
+    if(category=="mustach"||category=="brow"||category=="beard")
+    {
+        store->colors["color_brow"]=lightColor;
+    }
+    if(category=="glasses")
+    {
+        store->colors["color_glasses"]=lightColor;
+        store->colors["color_border_glasses"]=darkColor;
+        store->colors["opacity_glasses"]=QString().setNum(opacity);
+    }
+    if(category=="face")
+    {
+        store->colors["color_face_light"]=lightColor;
+        store->colors["color_face_dark"]=darkColor;
+    }
+    if(category=="eye")
+    {
+        store->colors["color_eye"]=lightColor;
+    }
+    if(category=="feature")
+    {
+        store->colors["color_grove"]=lightColor;
+    }
+    displayWidget->refresh();
+}
+
+void EditorWindow::setTransparency()
+{
+
+}
+
+ColorDialog::ColorDialog(QString lightColor, QString darkColor, double transparency, QWidget* parent):QDialog(parent)
+{
+    dlg=new Ui_Dialog();
+    dlg->setupUi(this);
+    dlg->opacity->setValue(100*transparency);
+    QPalette palLight, palDark;
+    palLight.setColor(QPalette::Normal, QPalette::Button, QColor(lightColor));
+    dlg->lightColor->setPalette(palLight);
+    palDark.setColor(QPalette::Normal, QPalette::Button, QColor(darkColor));
+    dlg->darkColor->setPalette(palDark);
+    connect(dlg->lightColor, SIGNAL(clicked()), this, SLOT(changeLightColor()));
+    connect(dlg->darkColor, SIGNAL(clicked()), this, SLOT(changeDarkColor()));
+}
+
+void ColorDialog::changeLightColor()
+{
+    QColor c= QColorDialog::getColor(dlg->lightColor->palette().color(QPalette::Button));
+    QPalette pal;
+    pal.setColor(QPalette::Button, c);
+    dlg->lightColor->setPalette(pal);
+}
+
+void ColorDialog::changeDarkColor()
+{
+    QColor c= QColorDialog::getColor(dlg->darkColor->palette().color(QPalette::Button));
+    QPalette pal;
+    pal.setColor(QPalette::Button, c);
+    dlg->darkColor->setPalette(pal);
+}
+
+void ColorDialog::getValues(QString& cl, QString& cd, double& t)
+{
+    cl= dlg->lightColor->palette().color(QPalette::Button).name();
+    cd= dlg->darkColor->palette().color(QPalette::Button).name();
+    t=((double)dlg->opacity->value())/100;
 }

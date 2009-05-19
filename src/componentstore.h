@@ -14,6 +14,7 @@ class MiiComponentStore
         QString getComponentSvg(QString item);
         QMap<QString, QString> getPreview(QString prefix);
         QString getColorDefinitions();
+        QMap<QString, QString> colors;
     private:
         QDomDocument * doc;
         QMap<QString, QString> components;

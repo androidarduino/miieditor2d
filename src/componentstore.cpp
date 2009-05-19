@@ -17,6 +17,21 @@ MiiComponentStore::MiiComponentStore(QString source)
     }
     doc->setContent(&file);
     createComponents();
+    colors["color_hair"]="red";
+    colors["color_under"]="green";
+    colors["color_mole"]="brown";
+    colors["color_lip_light"]="red";
+    colors["color_lip_dark"]="brown";
+    colors["color_mustach"]="brown";
+    colors["color_grove"]="brown";
+    colors["color_eye"]="blue";
+    colors["color_glasses"]="grey";
+    colors["opacity_glasses"]="0.3";
+    colors["color_border_glasses"]="black";
+    colors["color_brow"]="black";
+    colors["color_beard"]="brown";
+    colors["color_face_light"]="white";
+    colors["color_face_dark"]="#f9c18a";
 }
 
 QString MiiComponentStore::getComponentSvg(QString item)
@@ -46,7 +61,10 @@ QMap<QString, QString> MiiComponentStore::getPreview(QString prefix)
 
 QString MiiComponentStore::getColorDefinitions()
 {
-    return getDefs();
+    QString s= getDefs();
+    foreach(QString key, colors.keys())
+        s=s.replace(key,colors[key]);
+    return s;
 }
 
 void MiiComponentStore::createComponents()
@@ -96,8 +114,8 @@ void MiiComponentStore::splitHair(QString& lower, QString& upper, QString src)
         lower=s.remove(p5, p6-p5).replace("hair","under");
 
     s=src;
-    if(src.indexOf("hair62")!=-1)
-        qDebug()<<"hair 62 found"<<p3<<p4<<p5<<p6<<src;
+/*    if(src.indexOf("hair62")!=-1)
+        qDebug()<<"hair 62 found"<<p3<<p4<<p5<<p6<<src;*/
 
     if(s.indexOf("singleLayer")!=-1)
         upper=s;
@@ -117,7 +135,8 @@ QString MiiComponentStore::getDefs()
     return s;
 }
 
-QString MiiComponentStore::generateHairWithFace(QString key)
+QString MiiComponentStore::generateHairWithFace(QString key)//for testing purpose only
 {
     return components[key.replace("hair", "under")]+components["face0"]+components[key];
 }
+
