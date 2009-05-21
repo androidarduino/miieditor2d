@@ -28,7 +28,8 @@ MiiComponentStore::MiiComponentStore(QString source)
     colors["color_glasses"]="grey";
     colors["opacity_glasses"]="0.3";
     colors["color_border_glasses"]="black";
-    colors["color_brow"]="black";
+    colors["color_brow"]="orange";
+    colors["color_nose"]="brown";
     colors["color_beard"]="brown";
     colors["color_face_light"]="white";
     colors["color_face_dark"]="#f9c18a";
