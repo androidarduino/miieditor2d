@@ -185,6 +185,12 @@ void EditorWindow::setColor()
         darkColor="white";
         opacity=1;
     }
+    if(category=="nose")
+    {
+        lightColor=store->colors["color_nose"];
+        darkColor="white";
+        opacity=1;
+    }
     ColorDialog dlg(lightColor,darkColor,opacity);
     dlg.exec();
     dlg.getValues(lightColor, darkColor, opacity);
@@ -225,6 +231,10 @@ void EditorWindow::setColor()
     if(category=="feature")
     {
         store->colors["color_grove"]=lightColor;
+    }
+    if(category=="nose")
+    {
+        store->colors["color_nose"]=lightColor;
     }
     displayWidget->refresh();
 }
