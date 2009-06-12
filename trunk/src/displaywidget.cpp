@@ -1,12 +1,13 @@
 #include "displaywidget.h"
 
-DisplayWidget::DisplayWidget(MiiComponentStore* database)
+DisplayWidget::DisplayWidget(MiiComponentStore* database, QWidget* parent )
+	: QSvgWidget( parent ), //we have to initialize its parent, even though Qt will help us manage the garbage colletion
+	m_store( database ), //List members in an initialization list in the order in which they are declared. effective c++
+	currentFileName("")
 {
-    m_store=database;
     renderer()->setViewBox(QRectF(0,0,744,1052));
     setFixedSize(372, 526);
     currentItem=&face;
-    currentFileName="";
 }
 
 void DisplayWidget::refresh()

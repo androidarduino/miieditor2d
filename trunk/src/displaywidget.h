@@ -23,8 +23,8 @@ class DisplayWidget:public QSvgWidget
 {
     Q_OBJECT
 public:
-    QString currentSVG;
-    DisplayWidget(MiiComponentStore* database);
+    QString currentSVG; // is it better to use currentSVG() const for security issue
+    DisplayWidget( MiiComponentStore* database, QWidget* parent = 0 );
     QString currentCategory();
 
 public slots:

@@ -5,7 +5,7 @@ EditorWindow::EditorWindow(QWidget* parent, Qt::WindowFlags flags):QMainWindow(p
     ui=new Ui::MainWindow();
     ui->setupUi(this);
     store=new MiiComponentStore("all.svg");
-    displayWidget=new DisplayWidget(store);
+    displayWidget=new DisplayWidget( store, this );
     ui->scrollArea->setWidget(displayWidget);
     setupToolBox();
     connectToolBox();
@@ -37,7 +37,7 @@ QWidget* EditorWindow::getToolBoxItems(QString category)
     for(int i=0;i<items.count();i++)
     {
         QString content=((defs+items.values().at(i)+"</svg>"));
-        ToolBoxItem *svg=new ToolBoxItem(items.keys().at(i), category);
+        ToolBoxItem *svg = new ToolBoxItem( items.keys().at(i), category, this );
         connect(svg, SIGNAL(itemSelected(ToolBoxItem*)), this, SLOT(selectionChanged(ToolBoxItem*)));
         *svgList<<svg;
 		//qDebug()<<content;

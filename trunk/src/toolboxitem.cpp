@@ -1,20 +1,11 @@
 #include "toolboxitem.h"
 
-ToolBoxItem::ToolBoxItem(QString name, QString category)
+ToolBoxItem::ToolBoxItem( QString name, QString category, QWidget* parent )
+	: QSvgWidget( parent ),
+	m_selected( false ),
+	m_name( name ),
+	m_category( category )
 {
-    m_name=name;
-    m_selected=false;
-    m_category=category;
-}
-
-QString ToolBoxItem::category()
-{
-    return m_category;
-}
-
-QString ToolBoxItem::name()
-{
-    return m_name;
 }
 
 void ToolBoxItem::mousePressEvent(QMouseEvent * event)
