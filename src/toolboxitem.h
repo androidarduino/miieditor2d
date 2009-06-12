@@ -6,13 +6,13 @@
 #include <QPainter>
 #include <QDebug>
 
-class ToolBoxItem:public QSvgWidget
+class ToolBoxItem : public QSvgWidget
 {
     Q_OBJECT
 public:
-    ToolBoxItem(QString name, QString category);
-    QString category();
-    QString name();
+    ToolBoxItem( QString name = QString(), QString category = QString(), QWidget* parent = 0 );
+	QString category() const { return m_category; }
+    QString name() const { return m_name; }
 protected:
     void mousePressEvent(QMouseEvent * event);
     void paintEvent(QPaintEvent* event);
