@@ -10,6 +10,10 @@
 int main(int argc, char** argv)
 {
 	QApplication app(argc, argv);
+	QTranslator trans;
+	if(trans.load("meedesigner_zh"))
+		qApp->installTranslator(&trans);
+
 //        if(QString(argv[1])=="win")
         {
                 EditorWindow win;
