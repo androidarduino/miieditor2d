@@ -44,3 +44,4 @@ SOURCES += src/main.cpp \
 
 FORMS   += src/mainwindow.ui src/color.ui
 RESOURCES   += src/res.qrc
+TRANSLATIONS += src/meedesigner_zh.ts
